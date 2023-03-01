@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/ginzafarm.png">
+    <title>FARBOT console</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/answer.js" defer></script>
+    <script src="js/answer_main.js" defer></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="video_container">
+            <video id="robot-video" muted controls autoplay playsinline></video>
+        </div>
+
+        <div class="status_container">
+            <div class="status_content">
+                <div class="radio_status">
+                    Radio controller mode: &nbsp<span id="rc_mode">none</span>
+                </div>
+                <div class="auto_nav_status">
+                    Autonomous drive : &nbsp<span id="auto_nav_mode">none</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission_control_container">
+            <div class="mission_control_content">
+                <button type="button" id="enable_wf_button" 
+                    onmousedown="send_enable_wf()"
+                    ontouchstart="send_enable_wf()">
+                Enable Auto <br> wall-following
+            </button>
+            <button type="button" id="disable_wf_button" 
+                    onmousedown="send_disable_wf()"
+                    ontouchstart="send_disable_wf()">
+                Disable Auto <br> wall-following
+            </button>
+            </div>
+        
+        </div>
+
+        <div class="arrow_control_container">
+            <div class="arrow_control_content">
+                <div class="up">
+                    <button type="button" id="up_button"
+                        onmousedown="press_up()"
+                        ontouchstart="press_up()"
+                        onmouseup="release_up()" 
+                        onmouseleave="release_up()"
+                        ontouchend="release_up()">
+                        UP
+                    </button>
+                </div>
+                <div class="left">
+                    <button type="button" id="left_button"
+                        onmousedown="press_left()"
+                        ontouchstart="press_left()" 
+                        onmouseup="release_left()" 
+                        onmouseleave="release_left()"
+                        ontouchend="release_left()">
+                        LEFT
+                    </button>
+                </div>
+                <div class="down">
+                    <button type="button" id="down_button"
+                        onmousedown="press_down()" 
+                        ontouchstart="press_down()"
+                        onmouseup="release_down()" 
+                        onmouseleave="release_down()"
+                        ontouchend="release_down()">
+                        DOWN
+                    </button>
+                </div>
+                <div class="right">
+                    <button type="button" id="right_button"
+                        onmousedown="press_right()"
+                        ontouchstart="press_right()" 
+                        onmouseup="release_right()" 
+                        onmouseleave="release_right()"
+                        ontouchend="release_right()">
+                        RIGHT
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

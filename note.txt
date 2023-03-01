@@ -1,0 +1,9 @@
+## TODO ##
+1. let's make a directory call `web_dev` and copy this folder (sumitomo_l5g) to Jetson Nano and also to Edge server
+
+### On Jetson
+2. on js/offer.js line 17, change server_ip to the same as Edge server's IP
+
+### On Edge server
+3. on js/answer.js line 25, change server_ip to the samne as Edge server's IP
+4. symlink index.html page to /var/www/html so user can easily access via 192.168.xx.xx on browser, make sure the icon and image path is correct
